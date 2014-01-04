@@ -1,13 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+ruby "1.9.3"
+
+gem 'rails', '3.2.16'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'ruby-freshbooks'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-
 
 # Gems used only for assets and not required
 # in production environments by default.
