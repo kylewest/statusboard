@@ -9,7 +9,9 @@ class FreshbooksController < ApplicationController
     now = Date.today
     this_month = now.month
     last_month = now.prev_month.month
-    date = Date.new(now.year, last_month, 1)
+    last_year = now.prev_month.year
+    date = Date.new(last_year, last_month, 1)
+
     freshbooks_response = @connection.payment.list :date_from => date, :per_page => 100
     pages = freshbooks_response['payments']['pages'].to_i
     payments = []
